@@ -23,11 +23,11 @@ const CartButtons = ({ customStyle, productId }) => {
       (p) => p.productId === productId
     );
     if (existingProduct) {
-      existingProduct.qty += state;
+      existingProduct.qtyItems += state;
     } else {
       const newProduct = {
         productId,
-        qty: state,
+        qtyItems: state,
       };
       setCount((prevState) => ({
         qtyItems: prevState.qtyItems + state,
@@ -46,7 +46,7 @@ const CartButtons = ({ customStyle, productId }) => {
         > 
         -
         </Button>
-        <span className="spamPrecio">{state}</span>
+        <span>{state}</span>
         <Button
           variant="outline-secondary"
           className="rounded-0"

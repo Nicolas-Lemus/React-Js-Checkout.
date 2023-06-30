@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { CardContext } from "../../context/CartContext";
 import "./CardButtons.css"
 
+
 const CartButtons = ({ customStyle, productId }) => {
   //DEBEMOS PASARLO COMO UN ARRAY
   const {count, setCount} = useContext(CardContext);
